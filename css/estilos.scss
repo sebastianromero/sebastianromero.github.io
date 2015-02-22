@@ -17,7 +17,7 @@ $negro: #262626;
 $desactivado: #e2e2e2;
 
 $f-base: 21px;
-$f-lheight: 32px;
+$f-lheight: 33px;
 $contenedor: 960px;
 
 
@@ -63,6 +63,7 @@ body{
 
 .sitio__titulo{
   color: $acento;
+  font-weight: $f-bold;
   &:link{color: $acento}
   &:visited{color: $acento}
 }
