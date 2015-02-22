@@ -12,3 +12,5 @@ paginate: 3
 permalink: '/:title'
 sass:
     style: :compressed
+prose:
+  media: "images"
