@@ -2,10 +2,12 @@
 ---
 @charset "utf-8";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:300italic,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Merriweather:400,400italic,900,900italic);
 
 
-$f-normal: 300;
+$f-normal: 400;
+
+$f-serif: "Merriweather", georgia, serif;
 
 $link: #b1b1b1;
 $acento: #b72426;
@@ -106,6 +108,8 @@ margin-bottom: 2rem;
         }
   }
   &__contenido{
+    font-family: $f-serif;
+    font-size: .8rem;
     overflow: hidden;
     float: none;
   }
