@@ -7,7 +7,6 @@ github_username:  sebastianromero
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
 
 paginate: 3
 permalink: '/:title'
