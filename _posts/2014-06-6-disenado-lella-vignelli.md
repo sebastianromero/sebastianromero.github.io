@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Diseñado por Lella Vignelli
-date: 2014-6-6
 categories: diseño Vignelli libros
 published: true
 ---
