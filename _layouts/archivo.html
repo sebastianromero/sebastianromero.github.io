@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="post">
+
+  <ul class="posteos__listado">
+    {% for post in site.posts %}
+      <li class="posteos__item">
+        <h2>
+          <a class="post__titulo" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post__fecha">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>

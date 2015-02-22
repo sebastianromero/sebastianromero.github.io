@@ -1,0 +1,157 @@
+---
+---
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300italic,300);
+
+
+$f-normal: 300;
+
+$link: #b1b1b1;
+$acento: #b72426;
+$negro: #262626;
+$desactivado: #e2e2e2;
+
+$f-base: 22px;
+$contenedor: 960px;
+
+
+html{
+  font-family: "Roboto", sans-serif;
+  font-weight: $f-normal;
+  font-size: $f-base;
+  line-height: 1.55;
+  color: $negro;
+  letter-spacing: -.01em;
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+}
+
+::selection{
+  background-color: $acento;
+  color: white !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: $f-normal;
+  font-size: 1rem;
+  margin: 0;
+
+}
+
+
+body{
+  vertical-align: baseline;
+  font-size: 1rem;;
+  max-width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+
+}
+
+.contenedor{
+  max-width: $contenedor;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.sitio__titulo{
+  color: $acento;
+  &:link{color: $acento}
+  &:visited{color: $acento}
+}
+
+
+
+.posteos{
+&__listado{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  & h2{
+    font-size: 1rem;
+  }
+}
+  &__item{
+    clear: both;
+    float: none;
+    width: auto;
+    overflow: hidden;
+    @media screen and(max-width: 35em){
+      margin-bottom: .5rem;
+    }
+  }
+
+
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.post{
+  @media screen and(min-width: 60em){
+margin-top: 3rem;;
+      }
+  &__header{
+float: none;
+margin-top: 2rem;
+margin-bottom: 2rem;
+    @media screen and(min-width: 60em){
+      width: 33%;
+      float: left;
+      margin: 0;
+        }
+  }
+  &__contenido{
+    overflow: hidden;
+    float: none;
+  }
+  &__titulo a{
+    color: $negro;
+    &:link{color: $negro}
+    &:visited{color: $negro}
+  }
+  &__fecha{
+    float: right;
+    font-weight: $f-normal;
+    color: $link;
+  }
+}
+
+p{
+  margin: 0 0 8px 0;
+}
+b, strong, th{
+  font-weight: $f-normal;
+}
+a{
+  text-decoration: none;
+  color: $link;
+  outline:0;
+  &:link{color: $link}
+  &:visited{color: $link}
+  &:hover{color: $negro; transition: color .1s ease-in-out;}
+}
+
+
+.cabecera{
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.paginacion{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 2rem;
+  &__adelante{text-align: right; display:table-cell;}
+  &__atras{text-align: left; display:table-cell}
+  &__adelante--desactivada, &__atras--desactivada{color: $desactivado}
+  &__numero-pagina{text-align: center; display:table-cell}
+}
+
+.comentarios{
+  padding-top: 4rem;
+}
