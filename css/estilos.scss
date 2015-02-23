@@ -61,36 +61,59 @@ body{
 }
 
 
-.sitio__titulo{
+.sitio{
+
+&__logo{
+  display: table-cell;
+}
+
+
+&__titulo{
   color: $acento;
   font-weight: $f-bold;
   &:link{color: $acento}
   &:visited{color: $acento}
 }
-
-
-
-.posteos{
-&__listado{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  & h2{
-    font-size: 1rem;
-  }
 }
+
+
+
+.archivo{
+  &__listado{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   &__item{
     clear: both;
     float: none;
-    width: auto;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
     overflow: hidden;
     @media screen and(max-width: 35em){
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__titulo{
+    display: table-cell;
+   color: $negro;
+  font-weight: $f-bold;
+  &:link{color: $negro}
+  &:visited{color: $negro}
+    }  
+
+    &__fecha{
+      display: table-cell;
+      font-weight: $f-normal;
+      color: $link;
+      text-align: right;
     }
   }
 
 
-}
+
 img{
   width: 100%;
   height: auto;
@@ -99,18 +122,18 @@ img{
 }
 .post{
   @media screen and(min-width: 60em){
-margin-top: 3rem;;
-      }
+    margin-top: 3rem;;
+  }
   &__header{
-float: none;
-padding-right: 1.5rem;
-margin-top: 2rem;
-margin-bottom: 2rem;
+    float: none;
+    padding-right: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     @media screen and(min-width: 60em){
       width: 33%;
       float: left;
       margin: 0;
-        }
+    }
   }
   &__contenido{
     font-family: $f-serif;
@@ -125,7 +148,6 @@ margin-bottom: 2rem;
     &:visited{color: $negro}
   }
   &__fecha{
-    float: right;
     font-weight: $f-normal;
     color: $link;
   }
@@ -150,7 +172,24 @@ a{
 .cabecera{
   padding-top: 1rem;
   margin-bottom: 2rem;
+  &__wrap{
+    display: table;
+    width: 100%;
+  }
+  &__menu{
+    display: table-cell;
+  }
 }
+
+.nav{
+  display: table;
+  width: 100%;
+  text-align: right;
+  &__item{
+    display: table-row;
+  }
+}
+
 
 
 .paginacion{
@@ -167,3 +206,4 @@ a{
 .comentarios{
   padding-top: 4rem;
 }
+
