@@ -2,8 +2,7 @@
 ---
 @charset "utf-8";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic|Merriweather:400,400italic,900,900italic);
-
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic|Roboto:700italic,300,700,300italic);
 
 $f-normal: 300;
 $f-bold: 700;
@@ -114,7 +113,7 @@ margin-bottom: 2rem;
   }
   &__contenido{
     font-family: $f-serif;
-    font-size: .9rem;
+    font-size: 1rem;
     overflow: hidden;
     float: none;
   }
