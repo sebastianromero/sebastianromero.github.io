@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+title: La responsabilidad del diseñador gráfico según Massimo Vignelli
 categories: diseño Vignelli
 ---
 
