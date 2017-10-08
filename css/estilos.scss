@@ -1,208 +1,41 @@
----
----
-@charset "utf-8";
-
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic|Roboto:700italic,300,700,300italic);
-
-$f-normal: 300;
-$f-bold: 700;
-$f-extrabold: 900;
-
-$f-serif: "Crimson Text", georgia, serif;
-
-$link: #b1b1b1;
-$acento: #b72426;
-$negro: #262626;
-$desactivado: #e2e2e2;
-
-$f-base: 21px;
-$f-lheight: 33px;
-$contenedor: 960px;
-
-
-html{
-  font-family: "Roboto", sans-serif;
-  font-weight: $f-normal;
-  font-size: $f-base;
-  line-height: $f-lheight;
-  color: $negro;
-  letter-spacing: -.01em;
-  -webkit-font-smoothing: antialiased;
-  overflow-y: scroll;
+* {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-family: Arial, "Roboto", "Sf Pro Display", Helvetica, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+   box-sizing: border-box;
 }
-
-::selection{
-  background-color: $acento;
-  color: white !important;
-}
-
-h1, h2, h3, h4, h5, h6{
-  font-weight: $f-bold;
-  font-size: 1rem;
+body {
   margin: 0;
-  color: $negro;
-
-}
-
-
-body{
-  vertical-align: baseline;
-  font-size: 1rem;;
-  max-width: 90%;
-  margin: 0 auto;
-  word-wrap: break-word;
-
-}
-
-.contenedor{
-  max-width: $contenedor;
-  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
-
-
-.sitio{
-
-&__logo{
-  display: table-cell;
+h1,
+p {
+  margin: 0;
 }
-
-
-&__titulo{
-  color: $acento;
-  font-weight: $f-bold;
-  &:link{color: $acento}
-  &:visited{color: $acento}
+a, h1 {
+  padding: 0.2em 1em;
+  display: inline-block;
 }
-}
-
-
-
-.archivo{
-  &__listado{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__item{
-    clear: both;
-    float: none;
-    display: table;
-    width: 100%;
-    overflow: hidden;
-    @media screen and(max-width: 35em){
-      margin-bottom: 1rem;
-    }
-  }
-  &__titulo{
-    display: table-cell;
-   color: $negro;
-  font-weight: $f-bold;
-  &:link{color: $negro}
-  &:visited{color: $negro}
-    }  
-
-    &__fecha{
-      display: table-cell;
-      font-weight: $f-normal;
-      color: $link;
-      text-align: right;
-    }
-  }
-
-
-
-img{
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.post{
-  @media screen and(min-width: 60em){
-    margin-top: 3rem;;
-  }
-  &__header{
-    float: none;
-    padding-right: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    @media screen and(min-width: 60em){
-      width: 33%;
-      float: left;
-      margin: 0;
-    }
-  }
-  &__contenido{
-    font-family: $f-serif;
-    font-size: 1.15rem;
-    overflow: hidden;
-    float: none;
-  }
-  &__titulo a{
-    color: $negro;
-    font-weight: $f-bold;
-    &:link{color: $negro}
-    &:visited{color: $negro}
-  }
-  &__fecha{
-    font-weight: $f-normal;
-    color: $link;
-  }
-}
-
-p{
-  margin: 0 0 1rem 0;
-}
-b, strong, th{
-  font-weight: $f-normal;
-}
-a{
-  text-decoration: none;
-  color: $link;
-  outline:0;
-  &:link{color: $link}
-  &:visited{color: $link}
-  &:hover{color: $negro; transition: color .1s ease-in-out;}
-}
-
-
-.cabecera{
-  padding-top: 1rem;
-  margin-bottom: 2rem;
-  &__wrap{
-    display: table;
-    width: 100%;
-  }
-  &__menu{
-    display: table-cell;
-  }
-}
-
-.nav{
+.contenedor {
   display: table;
+  height: 100%;
   width: 100%;
-  text-align: right;
-  &__item{
-    display: table-row;
+  display: table;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__interno {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
   }
 }
-
-
-
-.paginacion{
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  margin-top: 2rem;
-  &__adelante{text-align: right; display:table-cell;}
-  &__atras{text-align: left; display:table-cell}
-  &__adelante--desactivada, &__atras--desactivada{color: $desactivado}
-  &__numero-pagina{text-align: center; display:table-cell}
-}
-
-.comentarios{
-  padding-top: 4rem;
-}
-
